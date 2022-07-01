@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - prints the standard error
  *
  * Return: Always 0 (success)
  */
