@@ -3,7 +3,7 @@
 /**
  * more_numbers - print numbers
  * Return: always 0
- */ 
+ */
 void more_numbers(void)
 {
 	int x, y;
