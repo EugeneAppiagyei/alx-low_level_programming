@@ -5,23 +5,25 @@
  * @x: a parameter
  * Return: a string
  */
-char *leet(char *x)
+char *leet(char *string)
 {
-	int a = 0, b, l = 5;
-	char tr[5] = {'A', 'E', 'O', 'T', 'L'};
-	char trw[5] = {'4', '3', '0', '7', '1'};
+	int a;
+	int b;
 
-	while (x[a])
+	char lower[] = "aeotl";
+	char upper[] = "AEOTL";
+	char numbers[] = "43071";
+
+	for (a = 0; string[a] != '\0'; a++)
 	{
-		b = 0;
-
-		while (b < 1)
+		for (b = 0; lower[b] != '\0' && upper[b] != '\0'; b++)
 		{
-			if (x[a] == tr[b] || x[a] - 32 == tr[b])
-				x[a] = trw[b];
-			b++;
+			if (string[a] == lower[b] || string[a] == upper[b])
+			{
+				string[a] = numbers[b];
+				break;
+			}
 		}
-		a++;
 	}
-	return (x);
+	return (string);
 }
